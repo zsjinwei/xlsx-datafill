@@ -494,7 +494,6 @@ class XlsxDataFill {
         }
 
         this._access.setRangeFormula(rng, formula);
-        rng.forEach(cell => this.applyDataStyle(cell, formula, template));
     }
 }
 
