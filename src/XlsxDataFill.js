@@ -157,7 +157,7 @@ class XlsxDataFill {
         if (this._opts.copyStyle)
             this._access.copyStyle(cell, template.cell);
         
-        if (styles && data) {
+        if (styles && data !== undefined) {
             _.each(styles, pair => {
                 if (_.startsWith(pair.name, ":")) {
                     this.getHandler(pair.name.substr(1)).call(this._opts, data, cell);
